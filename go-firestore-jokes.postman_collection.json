@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "6e45a4c2-b0c7-42e3-9a12-d32b270d9e83",
+		"name": "go-firestore-jokes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get joke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/joke/joke-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke",
+						"joke-id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all jokes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/joke",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add joke",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"joke\": \"Why'd the chicken cross the road?\",\n    \"punchline\": \"To get to the other side\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/joke",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update joke",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"joke\": \"Updated joke\",\n    \"punchline\": \"updated punchline\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/joke/joke-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke",
+						"joke-id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete joke",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/joke/joke-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"joke",
+						"joke-id"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
